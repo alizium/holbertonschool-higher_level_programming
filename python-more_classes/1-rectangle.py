@@ -7,9 +7,9 @@ class Rectangle:
     """Classe définit rectangle avec attributs privés width et height."""
 
     def __init__(self, width=0, height=0):
-        """Initialise un rectangle avec largeur et hauteur en les validant."""
-        self.__width = width
-        self.__height = width
+        """Initialise rectangle avec largeur et hauteur, avec vérification."""
+        self.height = height
+        self.width = width
 
         """
         @property : lis la valeur d'un attribut privé comme s'il était public
@@ -18,21 +18,6 @@ class Rectangle:
         Getter: récupère la valeur d'un attribut privé.
         Setter: définis ou modifier la valeur d'un attribut privé.
         """
-
-    # Ce qui vient après n'est pas une vraie variable, mais une fonction
-    @property
-    def width(self):
-        """Getter de la largeur du rectangle."""
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        """Setter de la largeur avec vérification."""
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
-        self.__width = value
 
     @property
     def height(self):
@@ -47,3 +32,17 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    @property
+    def width(self):
+        """Getter de la largeur du rectangle."""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Setter de la largeur avec vérification."""
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
