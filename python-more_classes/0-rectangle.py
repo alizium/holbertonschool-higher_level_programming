@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
-"""Definis une classe vide Rectangle"""
+"""Definis une classe Rectangle vide"""
 
 
 class Rectangle:
+
+    """pass : rend la classe Rectangle vide"""
     pass
