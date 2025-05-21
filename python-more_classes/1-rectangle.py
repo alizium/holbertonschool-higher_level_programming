@@ -6,7 +6,6 @@
 class Rectangle:
 
     def __init__(self, width=2, height=4):
-
         """Cette fonction ajoute des instances d'attributs privées :
         la largeur (width) et hauteur (height) dans des variables privées"""
 
