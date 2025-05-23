@@ -65,3 +65,7 @@ class Rectangle:
         for _ in range(self.__height):
             rect.append("#" * self.__width)
         return "\n".join(rect)
+
+    def __repr__(self):
+        """Retourne une chaîne du rectangle comme un entier"""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
