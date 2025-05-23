@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Classe Rectangle qui accepte des dimensions (width et height)"""
 
+number_of_instances = 0
 
 class Rectangle:
     """Classe définit rectangle avec attributs privés width et height."""
@@ -9,6 +10,11 @@ class Rectangle:
         """Initialise rectangle avec largeur et hauteur, avec vérification."""
         self.height = height
         self.width = width
+
+    def __del__(self):
+        """message et décrémente le compteur lors de la suppression de l'instance."""
+        Rectangle.number_of_instances -= 1
+        print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
 
         """
         @property : lis la valeur d'un attribut privé comme s'il était public
@@ -69,7 +75,3 @@ class Rectangle:
     def __repr__(self):
         """Retourne une chaîne du rectangle comme un entier"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
-
-    def __del__(self):
-        """Permet de supprimer l'instance de la classe Rectangle"""
-        print("Bye rectangle...")
