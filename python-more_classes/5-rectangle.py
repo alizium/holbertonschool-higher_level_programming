@@ -14,7 +14,7 @@ class Rectangle:
         @property : lis la valeur d'un attribut privé comme s'il était public
         exemple : print(rectangle.width)
 
-        Getter: récupère la valeur d'un attribut privé.
+        Getter: lis la valeur d'un attribut privé.
         Setter: définis ou modifier la valeur d'un attribut privé.
         """
 
@@ -72,4 +72,4 @@ class Rectangle:
 
     def __del__(self):
         """Permet de supprimer l'instance de la classe Rectangle"""
-        print("Bye Rectangle...")
+        print("Bye rectangle...")
