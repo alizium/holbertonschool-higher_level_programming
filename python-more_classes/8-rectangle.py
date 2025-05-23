@@ -15,7 +15,7 @@ class Rectangle:
     def __del__(self):
         """message et décrémente le compteur lors de la suppression de l'instance."""
         Rectangle.number_of_instances -= 1
-        print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+        print("Bye rectangle...")
 
         """
         @property : lis la valeur d'un attribut privé comme s'il était public
@@ -83,3 +83,5 @@ class Rectangle:
             raise TypeError("rect_1 and rect_2 must be an instance of Rectangle")
         if rect_1.area() >= rect_2.area():
             return rect_1
+        else:
+            return rect_2
