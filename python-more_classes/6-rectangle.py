@@ -1,15 +1,16 @@
 #!/usr/bin/python3
 """Classe Rectangle qui accepte des dimensions (width et height)"""
 
-number_of_instances = 0
-
 class Rectangle:
     """Classe définit rectangle avec attributs privés width et height."""
+
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Initialise rectangle avec largeur et hauteur, avec vérification."""
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
 
     def __del__(self):
         """message et décrémente le compteur lors de la suppression de l'instance."""
