@@ -79,7 +79,10 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        if not isinstance (rect_1, Rectangle)
+        """
+        Créer une méthode statique.
+        Si rect_1 ou rect_2 n'est pas une instance, renvoie un message d'erreur"""
+        if not isinstance (rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance (rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
