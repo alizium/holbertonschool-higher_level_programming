@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Classe Rectangle qui accepte des dimensions (width et height)"""
 
+
 class Rectangle:
     """Classe définit rectangle avec attributs privés width et height."""
     print_symbol = "#"

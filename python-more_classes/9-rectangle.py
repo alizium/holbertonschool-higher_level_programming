@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Classe Rectangle qui accepte des dimensions (width et height)"""
 
+
 class Rectangle:
     """Classe définit rectangle avec attributs privés width et height."""
     print_symbol = "#"
@@ -15,7 +16,7 @@ class Rectangle:
     def __del__(self):
         """message et décrémente le compteur lors de la suppression de l'instance."""
         Rectangle.number_of_instances -= 1
-        print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+        print("Bye rectangle...")
 
         """
         @property : lis la valeur d'un attribut privé comme s'il était public
@@ -76,3 +77,21 @@ class Rectangle:
     def __repr__(self):
         """Retourne une chaîne du rectangle comme un entier"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """
+        Créer une méthode statique.
+        Si rect_1 ou rect_2 n'est pas une instance, renvoie un message d'erreur"""
+        if not isinstance (rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance (rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        else:
+            return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)
