@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+"""..."""
+
 def lookup(obj):
     """
     Fonction lookup : prend un objet en paramètre
