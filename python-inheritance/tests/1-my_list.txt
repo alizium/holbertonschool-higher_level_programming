@@ -4,5 +4,6 @@
 >>> spec.loader.exec_module(module)
 >>> MyList = module.MyList
 >>> my_list = MyList()
+>>> my_list.append(42)
 >>> print(my_list)
-[]
+[42]
