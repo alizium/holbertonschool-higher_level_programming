@@ -7,5 +7,3 @@
 >>> my_list.append(42)
 >>> print(my_list)
 [42]
->>> my_list.print_sorted()
-[42]
