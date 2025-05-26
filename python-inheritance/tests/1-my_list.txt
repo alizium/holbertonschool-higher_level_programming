@@ -3,3 +3,6 @@
 >>> module = importlib.util.module_from_spec(spec)
 >>> spec.loader.exec_module(module)
 >>> MyList = module.MyList
+>>> my_list = MyList()
+>>> print(my_list)
+[]
