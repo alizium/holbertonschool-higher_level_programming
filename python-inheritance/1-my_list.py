@@ -23,6 +23,5 @@ class MyList(list):
         Affiche la liste triée par ordre croissant (du plus petit au plus grand),
         mais sans changer l’ordre des éléments dans la liste originale.
         """
-        sorted_list = sorted(self)
-        print(sorted_list)
-        return sorted_list
+        print(sorted(self))
+        return sorted(self)
