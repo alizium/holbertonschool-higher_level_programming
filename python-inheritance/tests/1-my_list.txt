@@ -3,7 +3,60 @@
 >>> module = importlib.util.module_from_spec(spec)
 >>> spec.loader.exec_module(module)
 >>> MyList = module.MyList
+
+# Instanciation
 >>> my_list = MyList()
+>>> print(my_list)
+[]
+
+# Test de append()
 >>> my_list.append(42)
 >>> print(my_list)
 [42]
+
+# print_sorted avec liste triée
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> print(my_list)
+[1, 2, 3]
+>>> my_list.print_sorted()
+[1, 2, 3]
+
+# print_sorted avec liste désordonnée
+>>> my_list = MyList()
+>>> my_list.append(3)
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> print(my_list)
+[3, 1, 2]
+>>> my_list.print_sorted()
+[1, 2, 3]
+
+# print_sorted avec nombre négatif
+>>> my_list = MyList()
+>>> my_list.append(4)
+>>> my_list.append(-2)
+>>> my_list.append(7)
+>>> print(my_list)
+[4, -2, 7]
+>>> my_list.print_sorted()
+[-2, 4, 7]
+
+# print_sorted avec liste vide
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
+
+# Vérifie que print_sorted ne modifie pas la liste originale
+>>> my_list = MyList()
+>>> my_list.append(10)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> sorted_list = my_list.print_sorted()
+[3, 5, 10]
+>>> print(my_list)
+[10, 3, 5]
