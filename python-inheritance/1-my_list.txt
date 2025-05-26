@@ -1,0 +1,2 @@
+cat 1-main.py
+./1-main.py
