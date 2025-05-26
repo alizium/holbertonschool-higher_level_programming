@@ -24,3 +24,4 @@ class MyList(list):
         mais sans changer l’ordre des éléments dans la liste originale.
         """
         print(sorted(self))
+        return sorted(self)
