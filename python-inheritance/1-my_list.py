@@ -11,7 +11,7 @@ class MyList(list):
     """
     Classe MyList : une version personnalisée de la classe list.
 
-    Hérite de la classe list, donc on peut l’utiliser comme une liste normale.
+    Hérite de la classe list, donc on peut l utiliser comme une liste normale.
     Exemple : on peut faire my_list.append(3), my_list[0], etc.
 
     Elle ajoute une méthode :
@@ -21,7 +21,6 @@ class MyList(list):
     def print_sorted(self):
         """
         Affiche la liste triée par ordre croissant (du plus petit au plus grand),
-        mais sans changer l’ordre des éléments dans la liste originale.
+        mais sans changer l ordre des éléments dans la liste originale.
         """
         print(sorted(self))
-        return sorted(self)
