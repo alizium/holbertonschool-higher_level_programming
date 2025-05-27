@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
-
 """
 Definis une classe enfant Rectangle qui herite de son parent BaseGeometry :
 """
+
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
 
 class Rectangle(BaseGeometry):
 
