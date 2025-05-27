@@ -35,20 +35,13 @@ class BaseGeometry:
             raise ValueError(f"{name} must be greater than 0")
 
 
-"""Definis une classe enfant Rectangle qui herite de son parent BaseGeometry"""
+"""
+Definis une classe enfant Rectangle qui herite de son parent BaseGeometry :
 
+Cette classe représente un rectangle
+défini par une largeur (width) et une hauteur (height).
 
-class Rectangle(BaseGeometry):
-
-    def __init__(self, width, height):
-
-        """
-        Classe Rectangle qui hérite de BaseGeometry.
-
-        Cette classe représente un rectangle
-        défini par une largeur (width) et une hauteur (height).
-
-        Lorsqu on crée un rectangle, on doit donner deux nombres :
+Lorsqu on crée un rectangle, on doit donner deux nombres :
             - la largeur
             - la hauteur
 
@@ -70,7 +63,18 @@ class Rectangle(BaseGeometry):
         pour vérifier automatiquement que les données sont correctes.
         """
 
+
+class Rectangle(BaseGeometry):
+
+    """Constructeur de la classe rectangle"""
+
+    def __init__(self, width, height):
+
+        """Instance integer_validator"""
+
         def integer_validator(self, name, value):
+
+            """stock la largeur de la hauteur dans un attribut privé"""
 
             self.integer_validator("width", width)
             self.integer_validator("height", height)
