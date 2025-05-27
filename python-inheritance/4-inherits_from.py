@@ -23,7 +23,7 @@ def inherits_from(obj, a_class):
         False sinon
         """
 
-    if isinstance(obj is a_class) and type(obj) is not a_class:
+    if isinstance(obj, a_class) and type(obj) is not a_class:
         return True
     else:
         return False
