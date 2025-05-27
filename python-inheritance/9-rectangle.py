@@ -5,32 +5,7 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 """
 Definis une classe enfant Rectangle qui herite de son parent BaseGeometry :
-
-Cette classe représente un rectangle
-défini par une largeur (width) et une hauteur (height).
-
-Lorsqu on crée un rectangle, on doit donner deux nombres :
-    la largeur
-    la hauteur
-
-Ces deux nombres doivent être :
-    des entiers (pas du texte, pas des booléens etc.)
-    strictement supérieurs à zéro (0)
-
-Si ce n est pas le cas, le programme renvoie une erreur.
-
-    Exemple d'utilisation :
-        r = Rectangle(4, 6)
-
-Ce rectangle sera stocké en mémoire avec deux valeurs,
-    invisibles de l extérieur :
-        __width (la largeur)
-        __height (la hauteur)
-
-Cette classe utilise une fonction héritée de la classe BaseGeometry
-pour vérifier automatiquement que les données sont correctes.
 """
-
 
 class Rectangle(BaseGeometry):
 
