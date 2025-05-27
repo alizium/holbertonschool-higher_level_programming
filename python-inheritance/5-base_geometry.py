@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-"""Definis une classe vide"""
+"""Definis une classe vide BaseGeometry"""
 
 
 class BaseGeometry:
