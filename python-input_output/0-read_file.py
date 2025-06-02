@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+"""permet de lire le fichier filename"""
+
 def read_file(filename=""):
 
     """Ouvrir le fichier en mode lecture ('r') avec l'encodage 'utf-8' en utilisant le with statement
