@@ -4,6 +4,8 @@
 import json
 
 """Convertit une chaîne JSON en objet Python."""""
+
+
 def from_json_string(my_str):
 
     """
