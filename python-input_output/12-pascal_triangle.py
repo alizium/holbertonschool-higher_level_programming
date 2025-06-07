@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
-"""genere un triangle de pascal"""
-
-
 """Retourne le triangle de Pascal jusqu'à la ligne n (comprise)."""
+
+
 def pascal_triangle(n):
 
     """Si n est inférieur ou égal à 0, retourne une liste vide"""
