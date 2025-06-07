@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+"""importe json"""
+
 import json
 
 """Écrit un objet au format JSON."""
@@ -19,4 +21,5 @@ def save_to_json_file(my_obj, filename):
         Convertit l'objet en chaîne JSON avec json.dumps()
         Écrit cette chaîne dans le fichier
         """
+
         f.write(json.dumps(my_obj))
