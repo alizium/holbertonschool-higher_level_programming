@@ -24,3 +24,6 @@ except:
 
 """étend la liste/ajoute des arguments"""
 ma_liste.extend(args)
+
+"""ajoute"""
+save_to_json_file(ma_liste, "add_item.json")
