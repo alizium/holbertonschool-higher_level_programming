@@ -38,9 +38,6 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
             (converti en octets) au navigateur"""
             self.wfile.write("simple API".encode('utf-8'))
 
-            """Affiche le chemin de la requête dans le terminal du serveur"""
-            print(self.path)
-
         elif self.path == '/data':  # Si le chemin demandé est '/data'
 
             """Crée un dictionnaire Python avec des données à envoyer"""
@@ -68,9 +65,6 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
             """Envoie la chaîne JSON (convertie en octets) au navigateur"""
             self.wfile.write(json_string.encode('utf-8'))
 
-            """Affiche le chemin de la requête '/data' dans le terminal"""
-            print(self.path)
-
         # Si le chemin demandé n'est ni '/' ni '/data'.
         else:  # Pour gérer les chemins inconnus
 
@@ -90,9 +84,6 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
 
             """Envoie le message d'erreur au navigateur"""
             self.wfile.write(error_message.encode('utf-8'))
-
-            """Affiche un message d'erreur et le chemin inconnu dans le terminal"""
-            print(f"Path not found: {self.path}")
 
 """Définit le numéro de port sur lequel le serveur écoutera les requêtes."""
 NUMERO_PORT = 8000
