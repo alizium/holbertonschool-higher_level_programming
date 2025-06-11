@@ -23,6 +23,7 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
         """
         if self.path == '/':
 
+            message = "simple API"
             """Envoie le code de statut ok 200 au navigateur"""
             self.send_response(200)
 
