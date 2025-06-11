@@ -27,7 +27,7 @@ def status():
 @app.route("/data")
 def data():
     """Retourne tous les noms d'utilisateurs enregistrés"""
-    return jsonify({"users": list(users.keys())})
+    return jsonify(list(users.keys()))
 
 """Définit la route '/users/<username>' pour accéder à un utilisateur spécifique"""
 @app.route("/users/<username>")
