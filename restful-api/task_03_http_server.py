@@ -23,7 +23,6 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
         """
         if self.path == '/':
 
-            message = "simple API"
             """Envoie le code de statut ok 200 au navigateur"""
             self.send_response(200)
 
@@ -37,7 +36,10 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
 
             """Envoie le message 'simple API'
             (converti en octets) au navigateur"""
-            self.wfile.write("simple API".encode('utf-8'))
+            self.wfile.write("Hello, this is a simple API!".encode('utf-8'))
+
+            """Affiche le chemin de la requête dans le terminal du serveur"""
+            print(self.path)
 
         elif self.path == '/data':  # Si le chemin demandé est '/data'
 
@@ -66,6 +68,15 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
             """Envoie la chaîne JSON (convertie en octets) au navigateur"""
             self.wfile.write(json_string.encode('utf-8'))
 
+            """Affiche le chemin de la requête '/data' dans le terminal"""
+            print(self.path)
+
+        elif self.path == '/status':
+            self.send_response(200)
+            self.send_header("Content-type", "text/plain")
+            self.end_headers()
+            self.wfile.write("OK".encode('utf-8'))
+
         # Si le chemin demandé n'est ni '/' ni '/data'.
         else:  # Pour gérer les chemins inconnus
 
@@ -75,7 +86,7 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
             """Indique que la réponse d'erreur est du texte brut."""
             self.send_header("Content-type", "text/plain")
 
-            error_message = "404 Not Found"
+            error_message = "Endpoint not found"
 
             """Communique la taille du message d'erreur"""
             self.send_header("Content-Length", str(len(error_message.encode('utf-8'))))
@@ -85,6 +96,9 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
 
             """Envoie le message d'erreur au navigateur"""
             self.wfile.write(error_message.encode('utf-8'))
+
+            """Affiche un message d'erreur et le chemin inconnu dans le terminal"""
+            print(f"Path not found: {self.path}")
 
 """Définit le numéro de port sur lequel le serveur écoutera les requêtes."""
 NUMERO_PORT = 8000
