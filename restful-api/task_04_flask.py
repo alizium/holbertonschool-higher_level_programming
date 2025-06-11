@@ -9,10 +9,7 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 """creation dictionnaire avec des utilisateurs"""
-users = {
-    "jane": {...},
-    "john": {...}
-}
+users = {}
 
 """Définit la route '/' qui renvoie un message de bienvenue"""
 @app.route("/")
@@ -61,4 +58,3 @@ def add_user():
 if __name__ == "__main__":
     """Démarre le serveur sur le port par défaut (5000)"""
     app.run()
-
